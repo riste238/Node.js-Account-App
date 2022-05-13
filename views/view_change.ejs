@@ -1,0 +1,24 @@
+<%- include('partials/head') -%>
+
+    <div class="row m-5">
+        <div class="col-10 offset-1 text-center">
+            <a href="/" class="btn btn-info">Accounts</a>
+            <a href="/add" class="btn btn-secondary">Add Account</a>
+            <a href="/edit" class="btn btn-warning">Edit/Delete</a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="col-8 offset-2">
+            <h4>Add Account</h4>
+            <form action="/change" method="post">
+                <input type="hidden" name="id" value="<%= data._id %>"><br>
+                <input type="text" name="name" value="<%= data.name %>" class="form-control"><br>
+                <input type="text" name="job" value="<%= data.job %>" class="form-control"><br>
+                <input type="text" name="age" value="<%= data.age %>" class="form-control"><br>
+                <button type="submit" class="btn btn-info form-control">Change Old Account</button>
+            </form>
+        </div>
+    </div>
+    <%- include('partials/footer') -%>

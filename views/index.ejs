@@ -1,0 +1,36 @@
+<%- include('partials/head') -%>
+ 
+  <div class="row m-5">
+      <div class="col-10 offset-1 text-center">
+        <a href="/" class="btn btn-info">Accounts</a>
+        <a href="/add" class="btn btn-secondary">Add Account</a>
+        <a href="/edit" class="btn btn-warning">Edit/Delete</a>
+      </div>
+  </div>
+
+    
+        <div class="container">
+            <div class="col-10 offset-2">
+                <h4>Accounts</h4>
+                <table class="table">
+                    <div class="thead">
+                        <tr>
+                            <th>Name</th>
+                            <th>Job</th>
+                            <th>Age</th>
+                        </tr>
+                    </div>
+                    <div class="tbody">
+                        
+                        <% for(let i = 0; i <data.length; i++){ %>
+                                <tr>
+                                    <td><%= data[i].name %></td>
+                                    <td><%= data[i].job %></td>
+                                    <td><%= data[i].age %></td>
+                                </tr>
+                            <% } %>
+                    </div>
+                </table>
+            </div>
+        </div>
+  <%- include('partials/footer')  -%>
